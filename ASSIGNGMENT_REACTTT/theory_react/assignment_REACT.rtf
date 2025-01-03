@@ -99,8 +99,7 @@ By using JavaScript expressions inside curly braces, you can conditionally displ
 \cf2\f0 Ans :\par
 
 \pard\li720\ri-1350\sa200\sl276\slmult1\cf0 In React, components are the building blocks of user interfaces. They are independent, reusable pieces of code that let you split your UI into smaller, manageable parts.\b0\par
-
-\pard\li720\ri-1350\sa200\sl276\slmult1\b Types of Components:\b0\par
+\b Types of Components:\b0\par
 
 \pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li1440\ri-1350\sa200\sl276\slmult1\b Functional Components:\b0\par
 
@@ -155,7 +154,34 @@ Props are typically used to pass data like configuration settings, content, or o
 
 \pard\ri-1350\sa200\sl276\slmult1\par
 
-\pard\li720\ri-1350\sa200\sl276\slmult1\par
+\pard\ri-1350\sa200\sl276\slmult1\qc\b\fs48 Hooks (useState, useEffect, useReducer, useMemo, useRef, useCallback)\par
+\par
+
+\pard\ri-1350\sa200\sl276\slmult1\cf1\f1\fs40\bullet  Question 1: \cf0 What are React hooks? How do useState() and useEffect() hooks work in\f0  \f1 functional components?\par
+\cf2\f0\fs36 Ans : \par
+\cf0\b0 React hooks are functions that let you "hook into" React state and lifecycle features from within functional components. They were introduced in React 16.8 and provide a way to add state and side effects to functional components without the need for class components.\par
+\ul\b UseState: \ulnone\b0\par
+\b Purpose: \b0 The \b useState\b0  hook is used to add state to a functional component.\par
+\b Explanation:\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1350\sa200\sl276\slmult1 state is the current value of the state variable.\par
+{\pntext\f2\'B7\tab}setState is a function that allows you to update the state variable.\par
+{\pntext\f2\'B7\tab}initialState is the initial value of the state variable.\b\fs40\par
+
+\pard\ri-1350\sa200\sl276\slmult1\ul\fs36 UseEffect:\ulnone\b0\par
+\b Purpose: \b0 The useEffect hook is used to perform side effects in functional components, such as fetching data, subscribing to events, or directly manipulating the DOM.\par
+\b Explanation:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1350\sa200\sl276\slmult1\b0 The first argument is a function that contains the side effect logic.\par
+{\pntext\f2\'B7\tab}The second argument (optional) is an array of dependencies. If provided, the effect will only run when those dependencies change. If you pass an empty array, the effect will only run once, after the initial render.\b\par
+
+\pard\ri-1350\sa200\sl276\slmult1\fs40 How they work in functional components:\fs36\par
+UseState:\b0\par
+When you call useState, React keeps track of the state value internally. Whenever you call setState to update the state, React re-renders the component, updating the UI with the new state value.\par
+\b UseEffect:\b0\par
+React runs the effect function after every render. If you provide a dependency array, React will only run the effect if one of the dependencies has changed since the last render.\b\f1\par
+
+\pard\li720\ri-1350\sa200\sl276\slmult1\b0\f0\par
 
 \pard\ri-1350\sa200\sl276\slmult1\b\f1\par
 }
