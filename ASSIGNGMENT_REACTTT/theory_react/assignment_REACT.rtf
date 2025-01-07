@@ -179,10 +179,46 @@ Props are typically used to pass data like configuration settings, content, or o
 UseState:\b0\par
 When you call useState, React keeps track of the state value internally. Whenever you call setState to update the state, React re-renders the component, updating the UI with the new state value.\par
 \b UseEffect:\b0\par
-React runs the effect function after every render. If you provide a dependency array, React will only run the effect if one of the dependencies has changed since the last render.\b\f1\par
+React runs the effect function after every render. If you provide a dependency array, React will only run the effect if one of the dependencies has changed since the last render.\par
 
-\pard\li720\ri-1350\sa200\sl276\slmult1\b0\f0\par
+\pard\li720\ri-1350\sa200\sl276\slmult1\par
 
-\pard\ri-1350\sa200\sl276\slmult1\b\f1\par
+\pard\ri-1350\sa200\sl276\slmult1\cf1\b\f1\fs40\bullet  Question 1:: \cf0 What is React Router?\f0   How does it handle routing in single-page applications?\par
+\cf2 Ans:\par
+\cf0\b0\fs36\tab React Router is a popular JavaScript library specifically designed for handling routing in React applications. It enables you to build single-page applications (SPAs) with seamless navigation between different views or components, without requiring full page reloads. \par
+\b Here's what React Router does:\b0\par
+\b Client-Side Routing:\b0\par
+Unlike traditional web applications where navigation is handled by the server, React Router manages routing within the client-side browser. This means that page transitions are faster and smoother, providing a better user experience.\par
+\b URL Management:\par
+\b0 React Router keeps the URL in sync with the content displayed on the page. This allows users to bookmark specific pages, share links, and use the browser's back and forward buttons as expected.\b\par
+Declarative Routing:\par
+\b0 React Router uses a declarative approach to define routes, which means you describe the desired structure of your application's navigation. This makes it easier to understand and maintain your routing logic.\par
+\b Components for Navigation:\b0\par
+React Router provides components like <Link> and <NavLink> to create navigation links, as well as <Route> and <Switch> to define which components should be rendered based on the current URL. \par
+\par
+\cf1\b\f1\bullet  Question 2: \cf0 Explain the difference between BrowserRouter, Route, Link, and Switch\f0  \f1 components in React Router.\cf2\par
+\f0 Ans:\line\cf0 BrowserRouter:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1350\sa200\sl276\slmult1\b0 A top-level component that enables client-side routing using the HTML5 History API.\par
+{\pntext\f2\'B7\tab}It keeps your UI in sync with the URL in the browser's address bar.\par
+{\pntext\f2\'B7\tab}Typically wraps your entire application or the section where you want routing functionality.\par
+
+\pard\ri-1350\sa200\sl276\slmult1\b Routes:\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1350\sa200\sl276\slmult1 A component introduced in React Router v6 that replaces the Switch component.\par
+{\pntext\f2\'B7\tab}It acts as a container for defining multiple Route components.\par
+{\pntext\f2\'B7\tab}The Routes component renders the first matching Route based on the current URL. \par
+
+\pard\ri-1350\sa200\sl276\slmult1\b Route:\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1350\sa200\sl276\slmult1 Defines a single route in your application.\par
+{\pntext\f2\'B7\tab}It takes two main props: path (the URL path to match) and element (the component to render when the path matches).\par
+{\pntext\f2\'B7\tab}You can define multiple Route components within a Routes component.\par
+
+\pard\ri-1350\sa200\sl276\slmult1\b Link:\b0\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\ri-1350\sa200\sl276\slmult1 A component that creates accessible navigation links within your application.\par
+{\pntext\f2\'B7\tab}When a user clicks a Link, it updates the URL without causing a full page reload.\par
+{\pntext\f2\'B7\tab}It takes a to prop that specifies the URL or path to navigate to.\cf2\f1\par
 }
  

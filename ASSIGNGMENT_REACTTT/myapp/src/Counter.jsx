@@ -4,13 +4,11 @@ import React, { useState } from 'react'
   // let counter= 0
  let [counter, setcounter] = useState(1)
   let addValue = ()=>{
-      // counter =counter + 1   
       setcounter(counter + 1)
       // console.log(counter);
         
   }
   let removeValue = ()=>{
-    // counter=counter-1
     setcounter(counter -1)
     // console.log(counter);
 
